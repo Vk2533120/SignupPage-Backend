@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 
 
-const MONGO_URI = 'mongodb+srv://vk2533120:5eT8M9fRm1xPS4Np@cluster0.6qftpfb.mongodb.net/sample_mflix?retryWrites=true&w=majority&appName=Cluster0'; 
+const MONGO_URI = 'mongodb+srv://vk2533120:5eT8M9fRm1xPS4Np@cluster0.6qftpfb.mongodb.net/Users?retryWrites=true&w=majority&appName=Cluster0'; 
 
 const connectDB = async () => {
     try {
