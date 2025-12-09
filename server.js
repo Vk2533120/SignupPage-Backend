@@ -1,17 +1,12 @@
 // server/server.js
-console.log("hello");
+
 
 const express = require('express');
-console.log("hello1");
-
 const mongoose = require('mongoose');
-console.log("hello2");
-
 const cors = require('cors');
-console.log("hello3");
 
 const apiRoutes = require('./routes/api');
-console.log("hello4");
+
 
 const app = express();
 const PORT = 5000;
