@@ -1,19 +1,12 @@
-// server/controllers/profileController.js
 const Profile = require('../models/Profile');
 
-/**
- * @desc Get user profile details
- * @route GET /api/profile
- * @access Private (Requires JWT token)
- */
+
 exports.getProfile = async (req, res) => {
     try {
-        // req.userId is set by the protect middleware after JWT verification
         const profile = await Profile.findOne({ userId: req.userId }).select('-__v -createdAt -updatedAt');
 
         if (!profile) {
-            // This case should rarely happen if a profile is created on registration, 
-            // but it's good for robustness.
+           
             return res.status(404).json({ message: 'Profile not found.' });
         }
 

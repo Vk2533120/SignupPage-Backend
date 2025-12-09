@@ -6,9 +6,9 @@ const userSchema = new mongoose.Schema({
         type: String, 
         required: true, 
         unique: true,
-        // Enforcing security/prepared statement equivalent by strict schema
+        
     },
-    password: { // Stored as a hashed value
+    password: { 
         type: String, 
         required: true 
     }
